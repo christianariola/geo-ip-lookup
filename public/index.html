@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaxMind Homework Exercise - Christian Ariola</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
+
 <body>
-    <h1>Geolocation IP Lookup</h1>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h1 class="text-center mb-4">Geolocation IP Lookup</h1>
 
-    <form action="" id="iplookup-form">
-        <label for="ip-addresses">Enter one or more IP addresses</label>
-        <input type="text" name="ipAddresses" id="ip-addresses">
-        <button type="submit">Submit</button>
-    </form>
+                <form id="iplookup-form" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="ip-addresses">Enter one or more IP addresses:</label>
+                        <input type="text" name="ipAddresses" id="ip-addresses" class="form-control" placeholder="e.g. 8.8.8.8, 1.1.1.1" required />
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter at least one IP address.
+                    </div>
 
-    <div id="results"></div>
+                    <button type="submit" class="btn btn-primary">Lookup</button>
+                </form>
+            
+                <div id="results" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
