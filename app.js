@@ -1,12 +1,10 @@
 const dotenv = require("dotenv").config();
 const express = require("express");
-const cors = require("cors");
 const request = require("request");
 const bodyParser = require("body-parser");
 const { Reader } = require("@maxmind/geoip2-node");
 
 const app = express();
-app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
@@ -27,6 +25,12 @@ app.listen(PORT, () => console.log(`listening to ${PORT}`));
 
 // IP lookup API endpoint
 app.post("/lookup", async (req, res) => {
+
+    // Check if the ipAddresses key exists in the request body
+    if (!req.body.ipAddresses) {
+        return res.status(400).json({ message: 'Missing ipAddresses key in request body' });
+    }
+
 	const ips = req.body.ipAddresses.split(",");
 	const results = [];
 
@@ -60,3 +64,5 @@ app.post("/lookup", async (req, res) => {
         res.status(200).json(results);
 	}
 });
+
+module.exports = app;
