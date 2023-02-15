@@ -21,14 +21,14 @@
                     <div class="form-group">
                         <label for="ip-addresses">Enter one or more IP addresses:</label>
                         <input type="text" name="ipAddresses" id="ip-addresses" class="form-control" placeholder="e.g. 8.8.8.8, 1.1.1.1" required />
-                    </div>
-                    <div class="invalid-feedback">
-                        Please enter at least one IP address.
+                        <div class="invalid-feedback"></div>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Lookup</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
                 </form>
-            
+            </div>
+            <div class="col-md-8 mx-auto">
                 <div id="results" class="mt-4"></div>
             </div>
         </div>
