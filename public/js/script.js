@@ -65,7 +65,7 @@ form.addEventListener("submit", async (event) => {
 
     // Show the results in a responsive table using bootstrap
 	let resultsHtml =
-		'<div class="table-responsive"><table class="table table-striped table-bordered"><thead><tr><th>IP Address</th><th>Country Code</th><th>Postal Code</th><th>City</th><th>Timezone</th><th>Accuracy Radius</th></tr></thead><tbody>';
+		'<div class="table-responsive"><table class="table table-striped table-bordered"><thead><tr><th class="align-middle">IP Address</th><th class="align-middle">Country Code</th><th class="align-middle">Postal Code</th><th class="align-middle">City</th><th class="align-middle">Timezone</th><th class="align-middle">Accuracy Radius</th></tr></thead><tbody>';
 
 	results.forEach((result) => {
 		resultsHtml += "<tr>";
