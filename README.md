@@ -20,7 +20,7 @@ To run this application, you will need to have Node.js installed on your machine
 * Create a .env file and add the following environment variables:
   - PORT = 8080
   - GEOIP_DB_PATH = "./database/GeoLite2-City.mmdb"
-* Start the development server: node app.js
+* Start/Run the application: node app.js
 
 ## Unit Testing
 * Navigate to the project's root directory: cd geo-ip-lookup
