@@ -1,6 +1,6 @@
 # Geolocation IP Lookup
 ## Description
-Homework Exercise for MaxMind. It's a web form that allows a user to enter one or more IP addresses and on submission, it will look up these IP addresses in the GeoLite2 City database and display the following data:
+It's a web form that allows a user to enter one or more IP addresses and on submission, it will look up these IP addresses in the GeoLite2 City database and display the following data:
 - Country Code
 - Postal Code
 - City Name
